@@ -22,9 +22,4 @@ export default createUseStyles({
     border: 'none',
     cursor: 'pointer',
   },
-  chatString: {
-    maxWidth: '50%',
-    fontFamily: 'monospace',
-    wordWrap: 'break-word',
-  },
 });
