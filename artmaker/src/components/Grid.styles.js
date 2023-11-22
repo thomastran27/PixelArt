@@ -3,15 +3,15 @@ import { createUseStyles } from 'react-jss';
 export default createUseStyles({
   grid: {
     display: 'grid',
-    gridTemplateRows: 'repeat(5, 1fr)',
-    gridTemplateColumns: 'repeat(8, 1fr)',
-    width: '80vmin',
-    height: '50vmin',
-    border: '2px solid black',
+    gridTemplateRows: 'repeat(16, 1fr)',
+    gridTemplateColumns: 'repeat(16, 1fr)',
+    width: '64vmin',
+    height: '64vmin',
+    border: '1px solid black',
   },
   cell: {
     cursor: 'pointer',
-    border: '2px solid black',
+    border: '1px solid black',
     background: 'white',
     transition: 'all 200ms linear',
     '&:hover': {

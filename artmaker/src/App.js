@@ -1,5 +1,3 @@
-/* eslint-disable jsx-a11y/no-static-element-interactions */
-/* eslint-disable jsx-a11y/click-events-have-key-events */
 import React, { useState, useMemo } from 'react';
 
 import Grid from './components/Grid';
@@ -10,7 +8,7 @@ const offCell = {
   on: false,
   color: '#000000',
 };
-const initialCells = Array.from({ length: 40 }, () => offCell);
+const initialCells = Array.from({ length: 256 }, () => offCell);
 
 function App() {
   const [cells, setCells] = useState(initialCells);
@@ -20,10 +18,6 @@ function App() {
     () => [
       ...new Set(cells.filter((cell) => cell.on).map((cell) => cell.color)),
     ],
-    [cells]
-  );
-  const chatString = useMemo(
-    () => cells.map((cell) => cell.color.slice(1)).join(','),
     [cells]
   );
   return (
@@ -40,12 +34,6 @@ function App() {
         ))}
       </div>
       <Grid cells={cells} setCells={setCells} currentColor={currentColor} />
-      <p className={classes.chatString}>
-        {/* eslint-disable-next-line */}
-        !rgb
-        {' '}
-        {chatString}
-      </p>
     </div>
   );
 }
