@@ -15,7 +15,8 @@ npm start
 
 
 ## If you encounter this error when trying to run: "Error: error:0308010C:digital envelope routines::unsupported"
-Follow the steps in order:
+Follow the steps in order: 
+  
 For WLS:
 ```sh
 export NODE_OPTIONS=--openssl-legacy-provider
