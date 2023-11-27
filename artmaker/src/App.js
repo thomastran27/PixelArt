@@ -5,14 +5,14 @@ import ColorPicker from './components/ColorPicker';
 import useStyles from './App.styles';
 
 const offCell = {
-  on: false,
+  on: true,
   color: '#000000',
 };
 const initialCells = Array.from({ length: 256 }, () => offCell);
 
 function App() {
   const [cells, setCells] = useState(initialCells);
-  const [currentColor, setCurrentColor] = useState('#56BC58');
+  const [currentColor, setCurrentColor] = useState('#aa79db');
   const classes = useStyles();
   const colorSwatch = useMemo(
     () => [

@@ -7,12 +7,12 @@ export default createUseStyles({
     gridTemplateColumns: 'repeat(16, 1fr)',
     width: '64vmin',
     height: '64vmin',
-    border: '1px solid black',
+    border: '1px solid white',
   },
   cell: {
     cursor: 'pointer',
-    border: '1px solid black',
-    background: 'white',
+    border: '1px solid white',
+    background: 'black',
     transition: 'all 200ms linear',
     '&:hover': {
       transform: 'scale(1.1)',
