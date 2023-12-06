@@ -39,3 +39,9 @@ nvm install 18.17.0
 ```sh
 nvm use 18.17.0
 ```
+
+## Node.js server backend
+
+### Setup
+Ensure you have the correct dependencies
+
