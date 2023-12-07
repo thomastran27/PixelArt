@@ -41,7 +41,7 @@ app.post('/login', async (req, res) => {
   res.json({ token });
 });
 
-const PORT = 5000;
+const PORT = 5005;
 app.listen(PORT, () => {
   console.log(`Server running on http://localhost:${PORT}`);
 });

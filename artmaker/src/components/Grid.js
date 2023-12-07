@@ -38,7 +38,7 @@ const Grid = ({ currentColor, cells, setCells }) => {
         <div
           // eslint-disable-next-line react/no-array-index-key
           key={i}
-          style={{ background: cell.on ? cell.color : '#ffffff' }}
+          style={{ background: cell.on ? cell.color : '#000000' }}
           className={classes.cell}
           onMouseOver={updateCell(i)}
           onMouseDown={updateCell(i)}

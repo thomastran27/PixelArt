@@ -7,7 +7,7 @@ import Register from './components/Register';
 import useStyles from './App.styles';
 
 const offCell = {
-  on: true,
+  on: false,
   color: '#000000',
 };
 const initialCells = Array.from({ length: 256 }, () => offCell);

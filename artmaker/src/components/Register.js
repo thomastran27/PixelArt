@@ -11,7 +11,7 @@ const Register = ({ onSwitch }) => {
   const handleSubmit = async (event) => {
     event.preventDefault();
     try {
-      const response = await axios.post('http://localhost:5000/register', { username, password });
+      const response = await axios.post('http://localhost:5005/register', { username, password });
       console.log('Registration successful', response.data);
       onSwitch(false);
       setErrorMessage('');
