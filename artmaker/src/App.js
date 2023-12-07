@@ -2,6 +2,8 @@ import React, { useState, useMemo } from 'react';
 
 import Grid from './components/Grid';
 import ColorPicker from './components/ColorPicker';
+import Login from './components/Login';
+import Register from './components/Register';
 import useStyles from './App.styles';
 
 const offCell = {
@@ -13,6 +15,8 @@ const initialCells = Array.from({ length: 256 }, () => offCell);
 function App() {
   const [cells, setCells] = useState(initialCells);
   const [currentColor, setCurrentColor] = useState('#56BC58');
+  const [isRegistering, setIsRegistering] = useState(false);
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
   const classes = useStyles();
   const colorSwatch = useMemo(
     () => [
@@ -20,8 +24,34 @@ function App() {
     ],
     [cells]
   );
+
+  const handleLoginSuccess = (token) => {
+    setIsLoggedIn(true);
+    localStorage.setItem('token', token); // Store the token
+  };
+
+  const handleLogout = () => {
+    setIsLoggedIn(false);
+    localStorage.removeItem('token'); // Clear the stored token on logout
+  };
+
+  if (!isLoggedIn) {
+    return (
+      <div className={classes.app}>
+        {isRegistering ? (
+          <Register onSwitch={() => setIsRegistering(false)} />
+        ) : (
+          <Login onSwitch={() => setIsRegistering(true)} onLoginSuccess={handleLoginSuccess} />
+        )}
+      </div>
+    );
+  }
+
   return (
     <div className={classes.app}>
+      <button onClick={handleLogout} className={classes.logoutButton}>
+        Logout
+      </button>
       <ColorPicker currentColor={currentColor} onSetColor={setCurrentColor} />
       <div className={classes.colorSwatchContainer}>
         {colorSwatch.map((color) => (

@@ -9,6 +9,7 @@ export default createUseStyles({
     justifyContent: 'center',
     alignItems: 'center',
     fontFamily: 'sans-serif',
+    position: 'relative',
   },
   colorSwatchContainer: {
     display: 'flex',
@@ -22,4 +23,21 @@ export default createUseStyles({
     border: 'none',
     cursor: 'pointer',
   },
+
+  logoutButton: {
+    position: 'absolute',
+    top: 10,
+    right: 10,
+    padding: '10px',
+    border: 'none',
+    borderRadius: '4px',
+    backgroundColor: '#ff6961',
+    color: 'white',
+    cursor: 'pointer',
+    fontSize: '16px',
+    '&:hover': {
+      backgroundColor: '#e35d56',
+    },
+  },  
 });
+
