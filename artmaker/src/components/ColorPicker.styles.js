@@ -3,7 +3,7 @@ import { createUseStyles } from 'react-jss';
 export default createUseStyles({
   colorPicker: {
     margin: '1rem',
-    padding: 0,
+    backgroundColor: 'black',
     width: '50px',
     height: '50px',
     outline: 'none',
